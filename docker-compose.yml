@@ -1,0 +1,13 @@
+version: '2.1'
+services:
+  backend:
+    image: ruby:2.3
+    container_name: graphql-backend
+    volumes:
+      - .:/graphql-backend
+    ports:
+      - '3000:3000'
+
+  db:
+    image: postgres:9.5-alpine
+    container_name: graphql-database
