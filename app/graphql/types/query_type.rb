@@ -4,6 +4,6 @@ Types::QueryType = GraphQL::ObjectType.define do
   # They will be entry points for queries on your schema.
 
   field :allLinks, !types[Types::LinkType] do
-    resolve -> (obj, args, ctx) { Link.all }
+    resolve -> (obj, args, ctx) { Link.includes(:user).all }
   end
 end
