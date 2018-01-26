@@ -6,4 +6,8 @@ Types::QueryType = GraphQL::ObjectType.define do
   field :allLinks, !types[Types::LinkType] do
     resolve -> (obj, args, ctx) { Link.includes(:user, votes: [:user]).all }
   end
+
+  field :allUsers, !types[Types::UserType] do
+    resolve -> (obj, args, ctx) { User.all }
+  end
 end
