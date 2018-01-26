@@ -7,4 +7,5 @@ Types::LinkType = GraphQL::ObjectType.define do
   # declaring a field postedBy with type Types::UserType and that remaps to the
   # model field :user
   field :postedBy, -> { Types::UserType }, property: :user
+  field :votes, -> { !types[Types::VoteType] }
 end
