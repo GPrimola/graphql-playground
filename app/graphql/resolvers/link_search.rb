@@ -6,6 +6,7 @@ class Resolvers::LinkSearch < GraphQL::Function
 
     argument :description_cont, types.String
     argument :url_cont, types.String
+    argument :id_eq, types.Int
   end
 
   LinkPagination = GraphQL::InputObjectType.define do
