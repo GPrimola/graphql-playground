@@ -13,3 +13,10 @@ end
     user: User.order('RANDOM()').first
   )
 end
+
+20.times do |n|
+  Vote.create(
+    user: User.order('RANDOM()').first,
+    link: Link.order('RANDOM()').first
+  )
+end
