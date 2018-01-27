@@ -19,9 +19,11 @@ class Resolvers::LinkSearch < GraphQL::Function
   argument :pagination, LinkPagination
 
   def call(_obj, args, _ctx)
-    search_params = args[:filter].to_h
-    page = args[:pagination][:page]
-    per_page = args[:pagination][:per_page]
+    args = args.to_h.with_indifferent_access
+
+    search_params = args[:filter]
+    page = args.dig(:pagination, :page)
+    per_page = args.dig(:pagination, :per_page)
 
     Link.ransack(search_params).result.page(page).per(per_page)
   end
