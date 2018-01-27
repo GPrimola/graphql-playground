@@ -8,4 +8,8 @@ Types::QueryType = GraphQL::ObjectType.define do
   field :allUsers, !types[Types::UserType] do
     resolve -> (obj, args, ctx) { User.all }
   end
+
+  field :allVotes, !types[Types::VoteType] do
+    resolve -> (obj, args, ctx) { Vote.all }
+  end
 end
