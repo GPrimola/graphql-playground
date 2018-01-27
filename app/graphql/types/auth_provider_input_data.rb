@@ -1,5 +1,5 @@
 Types::AuthProviderInputData = GraphQL::InputObjectType.define do
-  name 'AUTH_PROVIDER_INPUT_DATA'
+  name 'UserSignInData'
 
   argument :email, !types.String
   argument :password, !types.String
