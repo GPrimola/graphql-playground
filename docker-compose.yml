@@ -7,6 +7,8 @@ services:
       - .:/graphql-backend
     ports:
       - '3000:3000'
+    command: >
+      bash -c 'cd /graphql-backend && bundle install && rails db:setup && rails db:migrate && rails s'
 
   db:
     image: postgres:9.5-alpine
