@@ -90,6 +90,7 @@ GEM
       activerecord (>= 3.0)
     puma (3.11.2)
     rack (2.0.3)
+    rack-cors (1.0.2)
     rack-test (0.8.2)
       rack (>= 1.0, < 3)
     rails (5.1.4)
@@ -159,12 +160,10 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   pg (~> 0.21)
   puma (~> 3.7)
+  rack-cors
   rails (~> 5.1.4)
   ransack (~> 1.8.6)
   therubyracer
-
-RUBY VERSION
-   ruby 2.3.4p301
 
 BUNDLED WITH
    1.16.1

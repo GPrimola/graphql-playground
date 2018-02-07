@@ -16,6 +16,8 @@ gem 'bcrypt', '~> 3.1.11'
 gem 'ransack', '~> 1.8.6'
 # Paginate all things!
 gem 'kaminari', '~> 1.1.1'
+# Enable CORS so javascript requests are welcome
+gem 'rack-cors'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
